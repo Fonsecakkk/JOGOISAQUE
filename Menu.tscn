@@ -1,0 +1,79 @@
+[gd_scene load_steps=6 format=3 uid="uid://brbaurvkxuqt5"]
+
+[ext_resource type="Script" path="res://Menu.gd" id="1_waa47"]
+[ext_resource type="Texture2D" uid="uid://c24krwu8vyrvr" path="res://importante/depositphotos_575799546-stock-illustration-grass-texture-pixel-art-vector.jpg" id="2_0phcd"]
+[ext_resource type="FontFile" uid="uid://d154bnr8aqaxq" path="res://kenvector_future_thin.ttf" id="2_437gn"]
+[ext_resource type="FontFile" uid="uid://bbe1sp5pqno27" path="res://importante/El Superdotado.ttf" id="3_xkujd"]
+[ext_resource type="Texture2D" uid="uid://bm3t0q87qifrn" path="res://importante/360_F_534414005_MDe7QYbJSWmanX748HUAHZbUy4bUle0q.png" id="4_50wkd"]
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_right = -1.0
+offset_bottom = 7.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_waa47")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(270.5, 483.5)
+scale = Vector2(1.40263, 2.53947)
+texture = ExtResource("2_0phcd")
+
+[node name="TitleLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -227.0
+offset_top = 40.0
+offset_right = 203.0
+offset_bottom = 193.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_xkujd")
+theme_override_font_sizes/font_size = 135
+text = "GAME"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TitleLabel2" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -227.0
+offset_top = 169.0
+offset_right = 203.0
+offset_bottom = 322.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_xkujd")
+theme_override_font_sizes/font_size = 135
+text = "dino"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PlayButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -201.0
+offset_top = -68.0
+offset_right = 696.0
+offset_bottom = 300.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.450314, 0.44345)
+theme_override_fonts/font = ExtResource("2_437gn")
+theme_override_font_sizes/font_size = 60
+icon = ExtResource("4_50wkd")
+flat = true
+
+[connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]
